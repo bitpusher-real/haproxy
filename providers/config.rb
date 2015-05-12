@@ -17,6 +17,7 @@ def install_haproxy_config
     mode 00644
     variables(
       :defaults_options => defaults_options,
+      :defaults_config => defaults_config,
       :defaults_timeouts => defaults_timeouts
     )
   end
@@ -31,7 +32,7 @@ def defaults_options
 end
 
 def defaults_config
-  node['haproxy']['defaults_config'].dup.uniq
+  return node['haproxy']['defaults_config'].dup.uniq
 end
 
 def defaults_timeouts
