@@ -30,6 +30,10 @@ def defaults_options
   return options.uniq
 end
 
+def defaults_config
+  node['haproxy']['defaults_config'].dup.uniq
+end
+
 def defaults_timeouts
   node['haproxy']['defaults_timeouts']
 end

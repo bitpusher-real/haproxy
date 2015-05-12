@@ -59,6 +59,7 @@ default['haproxy']['stats_socket_group'] = node['haproxy']['group']
 default['haproxy']['pid_file'] = "/var/run/haproxy.pid"
 
 default['haproxy']['defaults_options'] = ["httplog", "dontlognull", "redispatch"]
+default['haproxy']['defaults_config'] = []
 default['haproxy']['x_forwarded_for'] = false
 default['haproxy']['global_options'] = {}
 default['haproxy']['defaults_timeouts']['connect'] = "5s"
