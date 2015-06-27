@@ -25,6 +25,9 @@ defaults
   option <%= option %>
 <% end -%>
   balance  <%= node['haproxy']['balance_algorithm'] %>
+<% node['haproxy']['defaults_config_options'].sort.each do |option, value| %>
+  <%= option %> <%= value %>
+<% end %>
 
 # Set up application listeners here.
 
