@@ -19,6 +19,7 @@
 
 package "haproxy" do
   version node['haproxy']['package']['version'] if node['haproxy']['package']['version']
+  options '--force-yes' if node['platform_family'] == 'debian'
 end
 
 directory node['haproxy']['conf_dir']
